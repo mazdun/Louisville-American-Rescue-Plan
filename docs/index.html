@@ -262,6 +262,11 @@ div.tocify {
 
 <div id="child-care" class="section level2">
 <h2>Child Care</h2>
+<p>Reliable access to child care in Louisville is vital to a healthy and inclusive economy. By some estimates, as many as 100,000 women in Kentucky stopped working during the pandemic because of a lack of childcare options. Additionally, according to state data, 9% of Louisville’s licensed child care centers closed between March 2020 and November 2021.</p>
+<p><strong>ARP Spending Recommendation:</strong> $7.5M to provide childcare and early learning projects to address immediate COVID needs, expand access to childcare and early learning, improve quality and mitigate COVID related developmental delays. (Office of the Mayor)</p>
+<div id="glp-data-story" class="section level3">
+<h3>GLP Data Story</h3>
+<p>GLP will explore what, specifically, is included in the $7.5M allocation for child care and link additional data sources to round out the story.</p>
 <pre class="r"><code>childcare_tree &lt;- suppressWarnings(read.csv(&#39;intermediate_data/childcare.csv&#39;))
 
 #install.packages(&quot;collapsibleTree&quot;)
@@ -270,12 +275,29 @@ library(collapsibleTree)
 childcare_plot &lt;- collapsibleTree(childcare_tree, 
                      c(&quot;category&quot;, &quot;topic&quot;,&quot;description&quot;),
                      root=&quot; &quot;,
+                     height = 250,
                      fill = &quot;#00acbb&quot;,
                      zoomable=FALSE)
 
 childcare_plot</code></pre>
-<div id="htmlwidget-a098a87399d795c952b6" style="width:672px;height:480px;" class="collapsibleTree html-widget"></div>
-<script type="application/json" data-for="htmlwidget-a098a87399d795c952b6">{"x":{"data":{"name":" ","children":[{"name":"Child Care","children":[{"name":"City's Allocation","children":[{"name":"$7.5B"}]},{"name":"Additional Data","children":[{"name":"New Zoning Regulations"},{"name":"Proximity to Jobs"}]},{"name":"Inclusive Economic Indicators","children":[{"name":"Gender Inclusion"}]}]}]},"options":{"hierarchy":["category","topic","description"],"input":null,"attribute":"leafCount","linkLength":null,"fontSize":10,"tooltip":false,"collapsed":true,"zoomable":false,"margin":{"top":20,"bottom":20,"left":30,"right":135},"fill":"#00acbb"}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-396650d924d2145c8b9a" style="width:672px;height:250px;" class="collapsibleTree html-widget"></div>
+<script type="application/json" data-for="htmlwidget-396650d924d2145c8b9a">{"x":{"data":{"name":" ","children":[{"name":"Child Care","children":[{"name":"Additional Data","children":[{"name":"New Zoning Regulations"},{"name":"Proximity to Jobs"},{"name":"Other Data?"}]},{"name":"Inclusive Economic Indicators","children":[{"name":"Gender Inclusion"}]}]}]},"options":{"hierarchy":["category","topic","description"],"input":null,"attribute":"leafCount","linkLength":null,"fontSize":10,"tooltip":false,"collapsed":true,"zoomable":false,"margin":{"top":20,"bottom":20,"left":30,"right":135},"fill":"#00acbb"}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="additional-data-context" class="section level3 tabset">
+<h3 class="tabset">Additional Data Context</h3>
+<div id="new-zoning-regulations" class="section level4">
+<h4>New Zoning Regulations</h4>
+<p>Family child care homes can now operate in all residential areas, under certain conditions. Large child care centers can now operate in certain residential and industrial zones (instead of only commercial ones), under certain conditions.</p>
+<p><strong>Deliverable:</strong> GLP would visualize the expansion in potential child care access, juxtaposed against certain economic data.</p>
+<p>Data Sources: <a href="https://wfpl.org/city-aims-to-expand-access-to-child-care-facilities-by-loosening-zoning-restrictions/">WFPL</a>, <a href="https://data.louisvilleky.gov/dataset/jefferson-county-ky-zoning-0">Louisville Open Data</a></p>
+<p><img src="images/zones.png" /></p>
+</div>
+<div id="proximity-to-jobs" class="section level4">
+<h4>Proximity to Jobs</h4>
+<p>Child care is tightly interwoven with labor force participation and other labor force outcomes. Louisville saw a large exodus of women from the labor force as child care options dwindled.</p>
+<p><strong>Deliverable:</strong> GLP would visualize Louisville’s job hot spots and compute the potential distances to child care.</p>
+</div>
+</div>
 </div>
 
 
