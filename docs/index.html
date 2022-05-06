@@ -280,8 +280,8 @@ childcare_plot &lt;- collapsibleTree(childcare_tree,
                      zoomable=FALSE)
 
 childcare_plot</code></pre>
-<div id="htmlwidget-396650d924d2145c8b9a" style="width:672px;height:250px;" class="collapsibleTree html-widget"></div>
-<script type="application/json" data-for="htmlwidget-396650d924d2145c8b9a">{"x":{"data":{"name":" ","children":[{"name":"Child Care","children":[{"name":"Additional Data","children":[{"name":"New Zoning Regulations"},{"name":"Proximity to Jobs"},{"name":"Other Data?"}]},{"name":"Inclusive Economic Indicators","children":[{"name":"Gender Inclusion"}]}]}]},"options":{"hierarchy":["category","topic","description"],"input":null,"attribute":"leafCount","linkLength":null,"fontSize":10,"tooltip":false,"collapsed":true,"zoomable":false,"margin":{"top":20,"bottom":20,"left":30,"right":135},"fill":"#00acbb"}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-b720759c195647ab9b33" style="width:672px;height:250px;" class="collapsibleTree html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b720759c195647ab9b33">{"x":{"data":{"name":" ","children":[{"name":"Child Care","children":[{"name":"Additional Data","children":[{"name":"New Zoning Regulations"},{"name":"Proximity to Jobs"},{"name":"Other Data?"}]},{"name":"Inclusive Economic Indicators","children":[{"name":"Gender Inclusion"}]}]}]},"options":{"hierarchy":["category","topic","description"],"input":null,"attribute":"leafCount","linkLength":null,"fontSize":10,"tooltip":false,"collapsed":true,"zoomable":false,"margin":{"top":20,"bottom":20,"left":30,"right":135},"fill":"#00acbb"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div id="additional-data-context" class="section level3 tabset">
 <h3 class="tabset">Additional Data Context</h3>
@@ -297,6 +297,30 @@ childcare_plot</code></pre>
 <p>Child care is tightly interwoven with labor force participation and other labor force outcomes. Louisville saw a large exodus of women from the labor force as child care options dwindled.</p>
 <p><strong>Deliverable:</strong> GLP would visualize Louisville’s job hot spots and compute the potential distances to child care.</p>
 </div>
+</div>
+</div>
+<div id="youth-development" class="section level2">
+<h2>Youth Development</h2>
+<p>A sizable portion of the Healthy Neighborhoods round of ARP spending will go toward youth development. Responding to this spending, GLP will explore, through various data sources, how Louisville’s kids in the 10-24 age range fare.</p>
+<p><strong>ARP Spending Recommendation:</strong> $8.5M in funding for a three year comprehensive and accessible Youth Development System for Louisville Youth (10-24) to access a variety of services and programs and improve public safety. (Office of Safe &amp; Healthy Neighborhoods)</p>
+<div id="glp-data-story-1" class="section level3">
+<h3>GLP Data Story</h3>
+<p>GLP will explore what, specifically, is included in the $8.5M allocation for youth development and link additional data sources to round out the story.</p>
+<pre class="r"><code>youth_development_tree &lt;- suppressWarnings(read.csv(&#39;intermediate_data/youth_development.csv&#39;))
+
+#install.packages(&quot;collapsibleTree&quot;)
+library(collapsibleTree) 
+
+childcare_plot &lt;- collapsibleTree(youth_development_tree, 
+                     c(&quot;category&quot;, &quot;topic&quot;,&quot;description&quot;),
+                     root=&quot; &quot;,
+                     height = 250,
+                     fill = &quot;#f28123&quot;,
+                     zoomable=FALSE)
+
+childcare_plot</code></pre>
+<div id="htmlwidget-e3708c2cc6f955e64431" style="width:672px;height:250px;" class="collapsibleTree html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e3708c2cc6f955e64431">{"x":{"data":{"name":" ","children":[{"name":"Youth Development","children":[{"name":"Additional Data","children":[{"name":"Kids Entering Detention Centers"},{"name":"Suicide Rates"},{"name":"Other Data?"}]},{"name":"Inclusive Economic Indicators","children":[{"name":"Parents' Job Data"}]}]}]},"options":{"hierarchy":["category","topic","description"],"input":null,"attribute":"leafCount","linkLength":null,"fontSize":10,"tooltip":false,"collapsed":true,"zoomable":false,"margin":{"top":20,"bottom":20,"left":30,"right":180},"fill":"#f28123"}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 

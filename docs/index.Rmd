@@ -19,7 +19,7 @@ Reliable access to child care in Louisville is vital to a healthy and inclusive 
 
 GLP will explore what, specifically, is included in the $7.5M allocation for child care and link additional data sources to round out the story.
 
-``` {r}
+``` {r child care}
 
 childcare_tree <- suppressWarnings(read.csv('intermediate_data/childcare.csv'))
 
@@ -34,9 +34,6 @@ childcare_plot <- collapsibleTree(childcare_tree,
                      zoomable=FALSE)
 
 childcare_plot
-
-
-
 ```
 
 ### Additional Data Context {.tabset}
@@ -54,5 +51,32 @@ Data Sources: [WFPL](https://wfpl.org/city-aims-to-expand-access-to-child-care-f
 Child care is tightly interwoven with labor force participation and other labor force outcomes. Louisville saw a large exodus of women from the labor force as child care options dwindled. 
 
 **Deliverable:** GLP would visualize Louisville's job hot spots and compute the potential distances to child care.
+
+## Youth Development
+
+A sizable portion of the Healthy Neighborhoods round of ARP spending will go toward youth development. Responding to this spending, GLP will explore, through various data sources, how Louisville's kids in the 10-24 age range fare. 
+
+**ARP Spending Recommendation:** $8.5M in funding for a three year comprehensive and accessible Youth Development System for Louisville Youth (10-24) to access a variety of services and programs and improve public safety. (Office of Safe & Healthy Neighborhoods)
+
+### GLP Data Story
+
+GLP will explore what, specifically, is included in the $8.5M allocation for youth development and link additional data sources to round out the story.
+
+``` {r youth development}
+
+youth_development_tree <- suppressWarnings(read.csv('intermediate_data/youth_development.csv'))
+
+#install.packages("collapsibleTree")
+library(collapsibleTree) 
+
+childcare_plot <- collapsibleTree(youth_development_tree, 
+                     c("category", "topic","description"),
+                     root=" ",
+                     height = 250,
+                     fill = "#f28123",
+                     zoomable=FALSE)
+
+childcare_plot
+```
 
 
