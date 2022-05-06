@@ -1,0 +1,32 @@
+---
+title: "Louisville American Rescue Plan Allocations"
+output: 
+  html_document:
+    self_contained: no
+    toc: true
+    toc_float: true
+    code_folding: hide
+knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_file = file.path(dirname(inputFile), 'index.html')) })
+---
+
+## Child Care
+
+
+``` {r}
+
+childcare_tree <- suppressWarnings(read.csv('intermediate_data/childcare.csv'))
+
+#install.packages("collapsibleTree")
+library(collapsibleTree) 
+
+childcare_plot <- collapsibleTree(childcare_tree, 
+                     c("category", "topic","description"),
+                     root=" ",
+                     fill = "#00acbb",
+                     zoomable=FALSE)
+
+childcare_plot
+
+
+
+```
