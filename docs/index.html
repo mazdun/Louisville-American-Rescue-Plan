@@ -11,7 +11,7 @@
 
 
 
-<title>Louisville American Rescue Plan Allocations</title>
+<title>Exploring Louisville’s American Rescue Plan Allocations</title>
 
 <script src="index_files/header-attrs-2.11/header-attrs.js"></script>
 <script src="index_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -255,18 +255,18 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Louisville American Rescue Plan Allocations</h1>
+<h1 class="title toc-ignore">Exploring Louisville’s American Rescue Plan Allocations</h1>
 
 </div>
 
 
 <div id="child-care" class="section level2">
-<h2>Child Care</h2>
+<h2><span style="color: #00acbb;">Child Care</span></h2>
 <p>Reliable access to child care in Louisville is vital to a healthy and inclusive economy. By some estimates, as many as 100,000 women in Kentucky stopped working during the pandemic because of a lack of childcare options. Additionally, according to state data, 9% of Louisville’s licensed child care centers closed between March 2020 and November 2021.</p>
 <p><strong>ARP Spending Recommendation:</strong> $7.5M to provide childcare and early learning projects to address immediate COVID needs, expand access to childcare and early learning, improve quality and mitigate COVID related developmental delays. (Office of the Mayor)</p>
 <div id="glp-data-story" class="section level3">
 <h3>GLP Data Story</h3>
-<p>GLP will explore what, specifically, is included in the $7.5M allocation for child care and link additional data sources to round out the story.</p>
+<p>GLP will explore what, specifically, is included in the $7.5M allocation for child care and <em>link additional data sources</em> (see below) to round out the story.</p>
 <pre class="r"><code>childcare_tree &lt;- suppressWarnings(read.csv(&#39;intermediate_data/childcare.csv&#39;))
 
 #install.packages(&quot;collapsibleTree&quot;)
@@ -280,47 +280,104 @@ childcare_plot &lt;- collapsibleTree(childcare_tree,
                      zoomable=FALSE)
 
 childcare_plot</code></pre>
-<div id="htmlwidget-b720759c195647ab9b33" style="width:672px;height:250px;" class="collapsibleTree html-widget"></div>
-<script type="application/json" data-for="htmlwidget-b720759c195647ab9b33">{"x":{"data":{"name":" ","children":[{"name":"Child Care","children":[{"name":"Additional Data","children":[{"name":"New Zoning Regulations"},{"name":"Proximity to Jobs"},{"name":"Other Data?"}]},{"name":"Inclusive Economic Indicators","children":[{"name":"Gender Inclusion"}]}]}]},"options":{"hierarchy":["category","topic","description"],"input":null,"attribute":"leafCount","linkLength":null,"fontSize":10,"tooltip":false,"collapsed":true,"zoomable":false,"margin":{"top":20,"bottom":20,"left":30,"right":135},"fill":"#00acbb"}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-dcd453229aa4aefa63cc" style="width:672px;height:250px;" class="collapsibleTree html-widget"></div>
+<script type="application/json" data-for="htmlwidget-dcd453229aa4aefa63cc">{"x":{"data":{"name":" ","children":[{"name":"Child Care","children":[{"name":"Additional Data","children":[{"name":"New Zoning Regulations"},{"name":"Proximity to Jobs"},{"name":"Other Data?"}]},{"name":"Inclusive Economic Indicators","children":[{"name":"Gender Inclusion"}]}]}]},"options":{"hierarchy":["category","topic","description"],"input":null,"attribute":"leafCount","linkLength":null,"fontSize":10,"tooltip":false,"collapsed":true,"zoomable":false,"margin":{"top":20,"bottom":20,"left":30,"right":135},"fill":"#00acbb"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div id="additional-data-context" class="section level3 tabset">
 <h3 class="tabset">Additional Data Context</h3>
 <div id="new-zoning-regulations" class="section level4">
 <h4>New Zoning Regulations</h4>
 <p>Family child care homes can now operate in all residential areas, under certain conditions. Large child care centers can now operate in certain residential and industrial zones (instead of only commercial ones), under certain conditions.</p>
-<p><strong>Deliverable:</strong> GLP would visualize the expansion in potential child care access, juxtaposed against certain economic data.</p>
+<p><strong>Deliverable:</strong> GLP will visualize the expansion in potential child care access, juxtaposed against certain economic data.</p>
 <p>Data Sources: <a href="https://wfpl.org/city-aims-to-expand-access-to-child-care-facilities-by-loosening-zoning-restrictions/">WFPL</a>, <a href="https://data.louisvilleky.gov/dataset/jefferson-county-ky-zoning-0">Louisville Open Data</a></p>
 <p><img src="images/zones.png" /></p>
 </div>
 <div id="proximity-to-jobs" class="section level4">
 <h4>Proximity to Jobs</h4>
 <p>Child care is tightly interwoven with labor force participation and other labor force outcomes. Louisville saw a large exodus of women from the labor force as child care options dwindled.</p>
-<p><strong>Deliverable:</strong> GLP would visualize Louisville’s job hot spots and compute the potential distances to child care.</p>
+<p><strong>Deliverable:</strong> GLP will visualize Louisville’s job hot spots and compute the potential distances to child care.</p>
 </div>
 </div>
 </div>
 <div id="youth-development" class="section level2">
-<h2>Youth Development</h2>
+<h2><span style="color: #00acbb;">Youth Development</span></h2>
 <p>A sizable portion of the Healthy Neighborhoods round of ARP spending will go toward youth development. Responding to this spending, GLP will explore, through various data sources, how Louisville’s kids in the 10-24 age range fare.</p>
 <p><strong>ARP Spending Recommendation:</strong> $8.5M in funding for a three year comprehensive and accessible Youth Development System for Louisville Youth (10-24) to access a variety of services and programs and improve public safety. (Office of Safe &amp; Healthy Neighborhoods)</p>
 <div id="glp-data-story-1" class="section level3">
 <h3>GLP Data Story</h3>
-<p>GLP will explore what, specifically, is included in the $8.5M allocation for youth development and link additional data sources to round out the story.</p>
+<p>GLP will explore what, specifically, is included in the $8.5M allocation for youth development and <em>link additional data sources</em> (see below) to round out the story.</p>
 <pre class="r"><code>youth_development_tree &lt;- suppressWarnings(read.csv(&#39;intermediate_data/youth_development.csv&#39;))
 
 #install.packages(&quot;collapsibleTree&quot;)
 library(collapsibleTree) 
 
-childcare_plot &lt;- collapsibleTree(youth_development_tree, 
+youth_development_plot &lt;- collapsibleTree(youth_development_tree, 
                      c(&quot;category&quot;, &quot;topic&quot;,&quot;description&quot;),
                      root=&quot; &quot;,
                      height = 250,
-                     fill = &quot;#f28123&quot;,
+                     fill = &quot;#00acbb&quot;,
                      zoomable=FALSE)
 
-childcare_plot</code></pre>
-<div id="htmlwidget-e3708c2cc6f955e64431" style="width:672px;height:250px;" class="collapsibleTree html-widget"></div>
-<script type="application/json" data-for="htmlwidget-e3708c2cc6f955e64431">{"x":{"data":{"name":" ","children":[{"name":"Youth Development","children":[{"name":"Additional Data","children":[{"name":"Kids Entering Detention Centers"},{"name":"Suicide Rates"},{"name":"Other Data?"}]},{"name":"Inclusive Economic Indicators","children":[{"name":"Parents' Job Data"}]}]}]},"options":{"hierarchy":["category","topic","description"],"input":null,"attribute":"leafCount","linkLength":null,"fontSize":10,"tooltip":false,"collapsed":true,"zoomable":false,"margin":{"top":20,"bottom":20,"left":30,"right":180},"fill":"#f28123"}},"evals":[],"jsHooks":[]}</script>
+youth_development_plot</code></pre>
+<div id="htmlwidget-495b11ea99531fbf0516" style="width:672px;height:250px;" class="collapsibleTree html-widget"></div>
+<script type="application/json" data-for="htmlwidget-495b11ea99531fbf0516">{"x":{"data":{"name":" ","children":[{"name":"Youth Development","children":[{"name":"Additional Data","children":[{"name":"Kids Entering Detention Centers"},{"name":"Suicide Rates"},{"name":"Drug Overdoses"},{"name":"Other Data?"}]},{"name":"Inclusive Economic Indicators","children":[{"name":"Parents' Job Data"}]}]}]},"options":{"hierarchy":["category","topic","description"],"input":null,"attribute":"leafCount","linkLength":null,"fontSize":10,"tooltip":false,"collapsed":true,"zoomable":false,"margin":{"top":20,"bottom":20,"left":30,"right":180},"fill":"#00acbb"}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="additional-data-context-1" class="section level3 tabset">
+<h3 class="tabset">Additional Data Context</h3>
+<div id="kids-entering-detention-centers" class="section level4">
+<h4>Kids Entering Detention Centers</h4>
+<p>Some kids and teens who are awaiting sentencing are required to stay at youth detention centers where they receive education and medical care.</p>
+<p><strong>Deliverable:</strong> GLP will analyze the number of kids who stay at these centers (by race and gender) and how long they stay there.</p>
+<p>Data Sources: <a href="https://data.louisvilleky.gov/dataset/youth-detention-services">Louisville Open Data</a>; Data only available 2017-2019.</p>
+</div>
+<div id="suicide-rates" class="section level4">
+<h4>Suicide Rates</h4>
+<p>Generally, nationwide, rates of suicide and self harm are on the rise among young people. Louisville has seen the same trends.</p>
+<p><strong>Deliverable:</strong> GLP will analyze the rate of suicide and self harm in Louisville.</p>
+<p>Data Sources: The Jefferson County Coroner’s Office maintains this data. The <a href="https://kycir.org/2021/10/29/youth-suicides-on-the-rise-in-louisville/">Kentucky Center for Investigative Reporting</a> has already obtained this data from the coroner’s office through a public information request. GLP should be able to obtain this already-compiled data easily through the same method.</p>
+</div>
+<div id="drug-overdoses" class="section level4">
+<h4>Drug Overdoses</h4>
+<p><strong>Deliverable:</strong> Through the same methodology used to determine suicide rates, GLP will request drug-related death data from the Jefferson County Coroner’s Office.</p>
+</div>
+</div>
+</div>
+<div id="libraries" class="section level2">
+<h2><span style="color: #00acbb;">Libraries</span></h2>
+<p>Libraries play an important role in any community, from giving people a place to escape extreme weather to providing reliable internet access and useful personal and career development programs. The Healthy Neighborhoods plan allocates a sizeable chunk of money to Louisville’s libraries.</p>
+<p><strong>ARP Spending Recommendation:</strong> $8M to renovate and expand the Main Louisville Free Public Library. $5M to open a new library branch in the Fern Creek area. $800K to renovate and expand the Portland Library. $800K to renovate and restore services to the Parkland Library. (Louisville Free Public Library)</p>
+<div id="glp-data-story-2" class="section level3">
+<h3>GLP Data Story</h3>
+<p>GLP will visualize these allocations and <em>link additional data sources</em> (see below) to round out the story and determine how important libraries are to the community.</p>
+<pre class="r"><code>libraries_tree &lt;- suppressWarnings(read.csv(&#39;intermediate_data/libraries.csv&#39;))
+
+#install.packages(&quot;collapsibleTree&quot;)
+library(collapsibleTree) 
+
+library_plot &lt;- collapsibleTree(libraries_tree, 
+                     c(&quot;category&quot;, &quot;topic&quot;,&quot;description&quot;),
+                     root=&quot; &quot;,
+                     height = 250,
+                     fill = &quot;#00acbb&quot;,
+                     zoomable=FALSE)
+
+library_plot</code></pre>
+<div id="htmlwidget-9eb19c5495661ebe9608" style="width:672px;height:250px;" class="collapsibleTree html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9eb19c5495661ebe9608">{"x":{"data":{"name":" ","children":[{"name":"Libraries","children":[{"name":"Additional Data","children":[{"name":"Map of Libraries and Internet Access (Path Forward)"},{"name":"Number of Public Internet Sessions per Year"},{"name":"Wireless Sessions per Year"},{"name":"People Receiving Training on Electronics"},{"name":"Children's Programming Attendance"},{"name":"Young Adult Programming Attendance"},{"name":"Adult Programming Attendance"}]},{"name":"Inclusive Economic Indicators","children":[{"name":"Jobs; Productivity"}]}]}]},"options":{"hierarchy":["category","topic","description"],"input":null,"attribute":"leafCount","linkLength":null,"fontSize":10,"tooltip":false,"collapsed":true,"zoomable":false,"margin":{"top":20,"bottom":20,"left":30,"right":280},"fill":"#00acbb"}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="additional-data-context-2" class="section level3 tabset">
+<h3 class="tabset">Additional Data Context</h3>
+<div id="libraries-and-internet-access" class="section level4">
+<h4>Libraries and Internet Access</h4>
+<p>For some, libraries are the only free and safe place to access the internet.</p>
+<p><strong>Deliverable:</strong> GLP will lean on the data previously analyzed in its Path Forward report and visualize Louisville’s libraries juxtaposed against internet access.</p>
+</div>
+<div id="other-library-data" class="section level4">
+<h4>Other library data</h4>
+<p>With more funding allocated for libraries, it is helpful to see what people use their public libraries for.</p>
+<p><strong>Deliverable:</strong> GLP will analyze a number of county-level library statistics (program attendance, internet and technology usage, etc.) that are available from the early 2000s onward.</p>
+<p>Data Sources: <a href="https://kdla.ky.gov/librarians/plssd/Pages/LibraryStatistics.aspx">Kentucky Departments for Libraries and Archives</a></p>
+</div>
 </div>
 </div>
 

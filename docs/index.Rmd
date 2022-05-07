@@ -1,5 +1,5 @@
 ---
-title: "Louisville American Rescue Plan Allocations"
+title: "Exploring Louisville's American Rescue Plan Allocations"
 output: 
   html_document:
     self_contained: no
@@ -9,7 +9,7 @@ output:
 knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_file = file.path(dirname(inputFile), 'index.html')) })
 ---
 
-## Child Care
+## <span style="color: #00acbb;">Child Care</span>
 
 Reliable access to child care in Louisville is vital to a healthy and inclusive economy. By some estimates, as many as 100,000 women in Kentucky stopped working during the pandemic because of a lack of childcare options. Additionally, according to state data, 9% of Louisville’s licensed child care centers closed between March 2020 and November 2021. 
 
@@ -17,7 +17,7 @@ Reliable access to child care in Louisville is vital to a healthy and inclusive 
 
 ### GLP Data Story
 
-GLP will explore what, specifically, is included in the $7.5M allocation for child care and link additional data sources to round out the story.
+GLP will explore what, specifically, is included in the $7.5M allocation for child care and *link additional data sources* (see below) to round out the story.
 
 ``` {r child care}
 
@@ -41,7 +41,7 @@ childcare_plot
 #### New Zoning Regulations
 Family child care homes can now operate in all residential areas, under certain conditions. Large child care centers can now operate in certain residential and industrial zones (instead of only commercial ones), under certain conditions. 
 
-**Deliverable:** GLP would visualize the expansion in potential child care access, juxtaposed against certain economic data.
+**Deliverable:** GLP will visualize the expansion in potential child care access, juxtaposed against certain economic data.
 
 Data Sources: [WFPL](https://wfpl.org/city-aims-to-expand-access-to-child-care-facilities-by-loosening-zoning-restrictions/), [Louisville Open Data](https://data.louisvilleky.gov/dataset/jefferson-county-ky-zoning-0)
 
@@ -50,9 +50,9 @@ Data Sources: [WFPL](https://wfpl.org/city-aims-to-expand-access-to-child-care-f
 #### Proximity to Jobs
 Child care is tightly interwoven with labor force participation and other labor force outcomes. Louisville saw a large exodus of women from the labor force as child care options dwindled. 
 
-**Deliverable:** GLP would visualize Louisville's job hot spots and compute the potential distances to child care.
+**Deliverable:** GLP will visualize Louisville's job hot spots and compute the potential distances to child care.
 
-## Youth Development
+## <span style="color: #00acbb;">Youth Development</span>
 
 A sizable portion of the Healthy Neighborhoods round of ARP spending will go toward youth development. Responding to this spending, GLP will explore, through various data sources, how Louisville's kids in the 10-24 age range fare. 
 
@@ -60,7 +60,7 @@ A sizable portion of the Healthy Neighborhoods round of ARP spending will go tow
 
 ### GLP Data Story
 
-GLP will explore what, specifically, is included in the $8.5M allocation for youth development and link additional data sources to round out the story.
+GLP will explore what, specifically, is included in the $8.5M allocation for youth development and *link additional data sources* (see below) to round out the story.
 
 ``` {r youth development}
 
@@ -69,14 +69,73 @@ youth_development_tree <- suppressWarnings(read.csv('intermediate_data/youth_dev
 #install.packages("collapsibleTree")
 library(collapsibleTree) 
 
-childcare_plot <- collapsibleTree(youth_development_tree, 
+youth_development_plot <- collapsibleTree(youth_development_tree, 
                      c("category", "topic","description"),
                      root=" ",
                      height = 250,
-                     fill = "#f28123",
+                     fill = "#00acbb",
                      zoomable=FALSE)
 
-childcare_plot
+youth_development_plot
 ```
 
+### Additional Data Context {.tabset}
 
+#### Kids Entering Detention Centers
+Some kids and teens who are awaiting sentencing are required to stay at youth detention centers where they receive education and medical care. 
+
+**Deliverable:** GLP will analyze the number of kids who stay at these centers (by race and gender) and how long they stay there.
+
+Data Sources: [Louisville Open Data](https://data.louisvilleky.gov/dataset/youth-detention-services); Data only available 2017-2019.
+
+#### Suicide Rates
+Generally, nationwide, rates of suicide and self harm are on the rise among young people. Louisville has seen the same trends. 
+
+**Deliverable:** GLP will analyze the rate of suicide and self harm in Louisville.
+
+Data Sources: The Jefferson County Coroner’s Office maintains this data. The [Kentucky Center for Investigative Reporting](https://kycir.org/2021/10/29/youth-suicides-on-the-rise-in-louisville/) has already obtained this data from the coroner's office through a public information request. GLP should be able to obtain this already-compiled data easily through the same method. 
+
+#### Drug Overdoses
+
+**Deliverable:** Through the same methodology used to determine suicide rates, GLP will request drug-related death data from the Jefferson County Coroner's Office.
+
+## <span style="color: #00acbb;">Libraries</span>
+
+Libraries play an important role in any community, from giving people a place to escape extreme weather to providing reliable internet access and useful personal and career development programs. The Healthy Neighborhoods plan allocates a sizeable chunk of money to Louisville's libraries.
+
+**ARP Spending Recommendation:** \$8M to renovate and expand the Main Louisville Free Public Library. \$5M to open a new library branch in the Fern Creek area. \$800K to renovate and expand the Portland Library. \$800K to renovate and restore services to the Parkland Library. (Louisville Free Public Library)
+
+### GLP Data Story
+
+GLP will visualize these allocations and *link additional data sources* (see below) to round out the story and determine how important libraries are to the community.
+
+``` {r libraries}
+
+libraries_tree <- suppressWarnings(read.csv('intermediate_data/libraries.csv'))
+
+#install.packages("collapsibleTree")
+library(collapsibleTree) 
+
+library_plot <- collapsibleTree(libraries_tree, 
+                     c("category", "topic","description"),
+                     root=" ",
+                     height = 250,
+                     fill = "#00acbb",
+                     zoomable=FALSE)
+
+library_plot
+```
+
+### Additional Data Context {.tabset}
+
+#### Libraries and Internet Access
+For some, libraries are the only free and safe place to access the internet. 
+
+**Deliverable:** GLP will lean on the data previously analyzed in its Path Forward report and visualize Louisville's libraries juxtaposed against internet access. 
+
+#### Other library data
+With more funding allocated for libraries, it is helpful to see what people use their public libraries for.
+
+**Deliverable:** GLP will analyze a number of county-level library statistics (program attendance, internet and technology usage, etc.) that are available from the early 2000s onward.
+
+Data Sources: [Kentucky Departments for Libraries and Archives](https://kdla.ky.gov/librarians/plssd/Pages/LibraryStatistics.aspx)
