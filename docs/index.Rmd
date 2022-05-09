@@ -139,3 +139,36 @@ With more funding allocated for libraries, it is helpful to see what people use 
 **Deliverable:** GLP will analyze a number of county-level library statistics (program attendance, internet and technology usage, etc.) that are available from the early 2000s onward.
 
 Data Sources: [Kentucky Departments for Libraries and Archives](https://kdla.ky.gov/librarians/plssd/Pages/LibraryStatistics.aspx)
+
+## <span style="color: #00acbb;">Affordable Housing</span>
+
+Louisville has allocated tens of millions of dollars to reduce the number of people experiencing homelessness.
+
+**ARP Spending Recommendation:** \$40M for an affordable housing trust fund expected to fund between 200 and 250 housing units for people at 30% of the area median income. \$32M to increase the capacity of permanent supportive housing by 200 units. \$1.5M for an outdoor safe space with about 50 tents and other facilities. \$7.5M for renovations to the College Street property (ultimately to replace the outdoor safe space). \$4M to expand an existing downpayment assistance program and help 160 new homeowners. \$4M in funding to an existing home repair program. (Office of Resilience & Community Services; Develop Louisville)
+
+### GLP Data Story
+
+GLP will visualize these allocations for others to clearly understand how Louisville proposes spending the money. A major theme that emerges from the data is the extreme shortage of housing units across the city. For example, it's estimated that Louisville needs about 31,000 housing units to fully meet the needs of those living with incomes at 30% of the area median income. This spending allocation would provide only 250 more units, in the best case scenario. 
+
+There is no shortage of data sources in Louisville illustrating this housing gap. (See the [Housing Needs Assessment (HNA)](https://louisvilleky.gov/government/housing/housing-needs-assessment) released periodically by Louisville’s Office of Housing and the Louisville Affordable Housing Trust Fund.
+
+GLP will expand on this data, visualizing the most recent estimates, and *link additional data sources* (see below) to round out the story.
+
+``` {r affordable housing}
+
+housing_tree <- suppressWarnings(read.csv('intermediate_data/affordable_housing.csv'))
+
+#install.packages("collapsibleTree")
+library(collapsibleTree) 
+
+housing_plot <- collapsibleTree(housing_tree, 
+                     c("category", "topic","description"),
+                     root=" ",
+                     height = 250,
+                     fill = "#00acbb",
+                     zoomable=FALSE)
+
+housing_plot
+```
+
+
