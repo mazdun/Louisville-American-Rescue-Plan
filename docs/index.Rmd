@@ -164,11 +164,57 @@ library(collapsibleTree)
 housing_plot <- collapsibleTree(housing_tree, 
                      c("category", "topic","description"),
                      root=" ",
-                     height = 250,
+                     height = 350,
                      fill = "#00acbb",
                      zoomable=FALSE)
 
 housing_plot
 ```
 
+### Additional Data Context {.tabset}
+
+#### Affordable Housing Gap
+As the [Housing Needs Assessment (HNA)](https://louisvilleky.gov/government/housing/housing-needs-assessment) shows, an urgent housing need exists for those living with the lowest incomes. For example, there are only enough available and affordable homes for 46% of households making 30% of the area median income. Louisville needs some 31,000 housing units for this segment of the population. ARP funds will help to bring the city more housing units but will not address the full need.
+
+**Deliverable:** GLP will creatively visualize this surprising gap across all income levels, bring in the most recent data and visualize trends over time.
+
+Data Sources: [Public Use Microdata Sample (PUMS)](https://www.census.gov/programs-surveys/acs/microdata.html); [Housing and Urban Development](https://www.huduser.gov/portal/datasets/assthsg.html)
+
+![](images/housing_affordability_gap.png)
+
+#### Profile of Homeowners in Subsidized Housing
+In addition to knowing how many affordable housing units are needed across Louisville, it's also important to  understand more about the homeowners. 
+
+**Deliverable:** GLP will analyze and visualize the detailed "Picture of Subsidized Households" data from the U.S. Department of Housing and Urban Development to gain a clearer understanding of the gender, age, race, disability status, income source and family structure of households that depend on various subsidized housing programs.
+
+Data Sources: [Housing and Urban Development](https://www.huduser.gov/portal/datasets/assthsg.html)
+
+#### Wait Times for Housing Assistance
+Long wait times for federal housing assistance have beleaguered communities and homeowners across the country. 
+
+**Deliverable:** GLP will analyze the current local wait times for housing assistance and the trends over time.
+
+Data Sources: [Housing and Urban Development](https://www.huduser.gov/portal/datasets/assthsg.html)
+
+#### Homelessness Demographics
+Who are those individuals in Louisville currently experiencing homelessness and how has that changed over time?
+
+**Deliverable:** GLP will aggregate and visualize demographic data from Louisville's Unsheltered Homeless Initiative Report from the Office of Resilience and Community Services. 
+
+Data Sources: [Unsheltered Homeless Initiative Reports](https://louisvilleky.gov/resilience-and-community-services/document/fy21unshelteredhomelessinitiativereportmidyear)
+
+#### Housing Units vs. Jobs
+In many cities across the country, there are more jobs available than there are housing units being built.
+
+**Deliverable:** GLP will juxtapose data about the number of new housing permits issued in the last year from the U.S. Census Bureau’s Building Permits Survey with data from the Bureau of Labor Statistics about new jobs being created in a given year. 
+
+Data Sources: [Building Permits Survey](https://www.census.gov/construction/bps/msamonthly.html); [Metro Area Employment](https://www.bls.gov/web/metro/metro_oty_change.html)
+
+## <span style="color: #00acbb;">Public Safety</span>
+
+Louisville has allocated tens of millions of dollars to for public safety and violence deterrence and prevention.
+
+**ARP Spending Recommendation:** 
+
+### GLP Data Story
 
