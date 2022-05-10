@@ -81,12 +81,19 @@ youth_development_plot
 
 ### Additional Data Context {.tabset}
 
-#### Kids Entering Detention Centers
-Some kids and teens who are awaiting sentencing are required to stay at youth detention centers where they receive education and medical care. 
+#### Transition to Adult Life
+Tracking what opportunities young people pursue after high school paints an important portrait of how the community's youngest people fare.
 
-**Deliverable:** GLP will analyze the number of kids who stay at these centers (by race and gender) and how long they stay there.
+**Deliverable:** GLP will analyze and visualize data relating to the post-secondary opportunities that young people pursue (college, technical training, military, work, etc.).
 
-Data Sources: [Louisville Open Data](https://data.louisvilleky.gov/dataset/youth-detention-services); Data only available 2017-2019.
+Data Sources: [Jefferson County Public Schools](https://assessment.jefferson.kyschools.us/PublicDatasets/PublicResources.aspx?id=511295)
+
+#### Disconnected Youth
+Young people who are not pursuing education, employment or other forms of training are considered disconnected. Disconnected youth are at a higher risk of experiencing homelessness or participating in criminal activity.
+
+**Deliverable:** GLP will update its previously compiled data on disconnected youth (between the ages of 16 and 24) to round out the story.
+
+Data Sources: [Federal Reserve](https://fred.stlouisfed.org/tags/series?t=disconnected+youth)
 
 #### Suicide Rates
 Generally, nationwide, rates of suicide and self harm are on the rise among young people. Louisville has seen the same trends. 
@@ -173,6 +180,11 @@ housing_plot
 
 ### Additional Data Context {.tabset}
 
+#### Rent vs. Income Trends
+Are incomes rising proportionately with rents for different segments of the population?
+
+**Deliverable:** GLP will analyze and visualize trends in rent prices and income over time.
+
 #### Affordable Housing Gap
 As the [Housing Needs Assessment (HNA)](https://louisvilleky.gov/government/housing/housing-needs-assessment) shows, an urgent housing need exists for those living with the lowest incomes. For example, there are only enough available and affordable homes for 46% of households making 30% of the area median income. Louisville needs some 31,000 housing units for this segment of the population. ARP funds will help to bring the city more housing units but will not address the full need.
 
@@ -196,12 +208,12 @@ Long wait times for federal housing assistance have beleaguered communities and 
 
 Data Sources: [Housing and Urban Development](https://www.huduser.gov/portal/datasets/assthsg.html)
 
-#### Homelessness Demographics
+#### Homelessness Statistics
 Who are those individuals in Louisville currently experiencing homelessness and how has that changed over time?
 
-**Deliverable:** GLP will aggregate and visualize demographic data from Louisville's Unsheltered Homeless Initiative Report from the Office of Resilience and Community Services. 
+**Deliverable:** GLP will aggregate and visualize homelessness data from the Coalition for the Homeless.
 
-Data Sources: [Unsheltered Homeless Initiative Reports](https://louisvilleky.gov/resilience-and-community-services/document/fy21unshelteredhomelessinitiativereportmidyear)
+Data Sources: [Annual Census of the Homeless in Metro Louisville](https://louhomeless.org/publications/)
 
 #### Housing Permits vs. New Jobs
 In many cities across the country, there are more jobs available than there are housing permits being issued.
@@ -214,7 +226,59 @@ Data Sources: [Building Permits Survey](https://www.census.gov/construction/bps/
 
 Louisville has allocated tens of millions of dollars to public safety and violence deterrence and prevention.
 
-**ARP Spending Recommendation:** 
+**ARP Spending Recommendation:** \$17.5M for various public safety reforms from the Hilliard Heintz report. \$8M for the Community Violence Intervention Program. \$6M for new LMPD equipment and expanded storage capacity. \$4.5M for Trauma Resilient Communities Expansion. \$3M for a new juvenile assessment center. \$1.3M for Restorative Justice Expansion. \$1M for the Ambassador Institute Expansion. \$1M for the Coordinated Crisis Response to Gun Violence. \$200K for  Family Recovery Courts. \$117K for an Everytown USA Data Fellow.3
 
 ### GLP Data Story
+
+GLP will visualize and expand on these allocations and link other data sources to round out the story.
+
+``` {r public safety}
+
+public_safety_tree <- suppressWarnings(read.csv('intermediate_data/public_safety.csv'))
+
+#install.packages("collapsibleTree")
+library(collapsibleTree) 
+
+public_safety_plot <- collapsibleTree(public_safety_tree, 
+                     c("category", "topic","description"),
+                     root=" ",
+                     height = 250,
+                     fill = "#00acbb",
+                     zoomable=FALSE)
+
+public_safety_plot
+```
+
+### Additional Data Context {.tabset}
+
+#### Kids Entering Detention Centers
+Some kids and teens who are awaiting sentencing are required to stay at youth detention centers where they receive education and medical care. In the second round of funding, there is $3M for a Juvenile Assessment Center to "receive and assess youth who have
+been detained pre-custody in coordination with the court designated workers
+assessment process." 
+
+**Deliverable:** GLP will analyze the number of kids who stay at detention centers (by race and gender) and how long they stay there.
+
+Data Sources: [Louisville Open Data](https://data.louisvilleky.gov/dataset/youth-detention-services); Data only available 2017-2019.
+
+#### Breakdown of Public Safety Spending
+How does Louisville's spending on equipment, personnel and programs within its police department compare to overall spending in other departments across the city and spending in other cities?  
+
+**Deliverable:** GLP will analyze broad buckets of spending within the police department and compare it to other cities.
+
+Data Sources: [Louisville Budget](https://louisvilleky.gov/government/management-budget/fy22-budget)
+
+#### Police Officer and Related Staff Salaries
+
+**Deliverable:** GLP will analyze how Louisville compensates its officers (both through salary and benefits) — and how that compares to its peer cities.
+
+Data Sources: [LMPD](https://www.louisville-police.org/278/Salaries)
+
+#### Professional Standards Unit Investigations
+
+**Deliverable:** GLP will analyze and visualize the overall number of investigations launched into police officers, the results of the investigations and the trends over time.
+
+Data Sources: [LMPD Transparency Reports](https://louisville-police.org/800/Transparency-Reports)
+
+
+
 
