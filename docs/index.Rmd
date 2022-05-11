@@ -215,6 +215,13 @@ Who are those individuals in Louisville currently experiencing homelessness and 
 
 Data Sources: [Annual Census of the Homeless in Metro Louisville](https://louhomeless.org/publications/)
 
+#### Youth Homelessness
+**Deliverable:** GLP will aggregate and visualize youth homelessness data from JCPS.
+
+Data Sources: JCPS
+
+Note: This will provide a broader definition of homelessness than just street homelessness. It includes people who are currently sheltered but without a certain home. Many are staying with another family or with a relative while their parents are unsheltered.
+
 #### Housing Permits vs. New Jobs
 In many cities across the country, there are more jobs available than there are housing permits being issued.
 
@@ -226,7 +233,7 @@ Data Sources: [Building Permits Survey](https://www.census.gov/construction/bps/
 
 Louisville has allocated tens of millions of dollars to public safety and violence deterrence and prevention.
 
-**ARP Spending Recommendation:** \$17.5M for various public safety reforms from the Hilliard Heintz report. \$8M for the Community Violence Intervention Program. \$6M for new LMPD equipment and expanded storage capacity. \$4.5M for Trauma Resilient Communities Expansion. \$3M for a new juvenile assessment center. \$1.3M for Restorative Justice Expansion. \$1M for the Ambassador Institute Expansion. \$1M for the Coordinated Crisis Response to Gun Violence. \$200K for  Family Recovery Courts. \$117K for an Everytown USA Data Fellow.3
+**ARP Spending Recommendation:** \$17.5M for various public safety reforms from the Hilliard Heintz report. \$8M for the Community Violence Intervention Program. \$6M for new LMPD equipment and expanded storage capacity. \$4.5M for Trauma Resilient Communities Expansion. \$3M for a new juvenile assessment center. \$1.3M for Restorative Justice Expansion. \$1M for the Ambassador Institute Expansion. \$1M for the Coordinated Crisis Response to Gun Violence. \$200K for  Family Recovery Courts. \$117K for an Everytown USA Data Fellow. (Louisville Metro Police Department; Office for Safe & Healthy Neighborhoods; Youth Transitional Services)
 
 ### GLP Data Story
 
@@ -278,6 +285,43 @@ Data Sources: [LMPD](https://www.louisville-police.org/278/Salaries)
 **Deliverable:** GLP will analyze and visualize the overall number of investigations launched into police officers, the results of the investigations and the trends over time.
 
 Data Sources: [LMPD Transparency Reports](https://louisville-police.org/800/Transparency-Reports)
+
+## <span style="color: #00acbb;">Public Health</span>
+
+Much of Louisville's initial round of ARP funds went toward immediate public health needs as the city responded to the COVID-19 pandemic.
+
+**ARP Spending Recommendation:** \$15M in reimbursement for eligible COVID-related public health expenditures. \$9.8M for the city's COVID-19 response & vaccination activities. \$1.5M for PPE supplies and equipment to 400 licensed and certified childcare providers. \$400K for suicide prevention. \$1.2M for targeted naloxone distribution, supportive services for syringe service participants and increased access to medication assisted
+treatment. 
+
+### GLP Data Story
+
+GLP will visualize these public health expenditures and  *link additional data sources* to expand on certain elements of the plan.
+
+``` {r public health}
+
+public_health_tree <- suppressWarnings(read.csv('intermediate_data/public_health.csv'))
+
+#install.packages("collapsibleTree")
+library(collapsibleTree) 
+
+public_health_plot <- collapsibleTree(public_health_tree, 
+                     c("category", "topic","description"),
+                     root=" ",
+                     height = 250,
+                     fill = "#00acbb",
+                     zoomable=FALSE)
+
+public_health_plot
+```
+
+### Additional Data Context {.tabset}
+
+#### Harm Reduction Data
+How will Louisville spend its $1.2M investment in targeted naloxone distribution, supportive services for syringe service participants and increased access to medication assisted treatment — and how has access to these services changed over time? 
+
+**Deliverable:** GLP will analyze county-level data over time in Louisville and its peer cities on the following: the number of syringe exchange programs, the number of substance abuse services facilities, the number of Buprenorphine providers, the distance to the nearest syringe services programs and the number of medication assisted treatment centers.
+
+Data Sources: [The Foundation for AIDS Research](https://ehe.amfar.org/data/HIV_plan)
 
 
 
