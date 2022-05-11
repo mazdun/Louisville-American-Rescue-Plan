@@ -13,7 +13,7 @@ knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = e
 
 Reliable access to child care in Louisville is vital to a healthy and inclusive economy. By some estimates, as many as 100,000 women in Kentucky stopped working during the pandemic because of a lack of childcare options. Additionally, according to state data, 9% of Louisville’s licensed child care centers closed between March 2020 and November 2021. 
 
-**ARP Spending Recommendation:** $7.5M to provide childcare and early learning projects to address immediate COVID needs, expand access to childcare and early learning, improve quality and mitigate COVID related developmental delays. (Office of the Mayor)
+**ARP Spending Recommendation:** $7.5M to provide childcare and early learning projects to address immediate COVID-19 needs, expand access to childcare and early learning, improve quality and mitigate COVID-19 related developmental delays. (Office of the Mayor)
 
 ### GLP Data Story
 
@@ -54,7 +54,7 @@ Child care is tightly interwoven with labor force participation and other labor 
 
 ## <span style="color: #00acbb;">Youth Development</span>
 
-A sizable portion of the Healthy Neighborhoods round of ARP spending will go toward youth development. Responding to this spending, GLP will explore, through various data sources, how Louisville's kids in the 10-24 age range fare. 
+A sizable portion of the Healthy Neighborhoods round of ARP spending will go toward youth development. GLP will explore, through various data sources, how Louisville's kids in the 10-24 age range fare. 
 
 **ARP Spending Recommendation:** $8.5M in funding for a three year comprehensive and accessible Youth Development System for Louisville Youth (10-24) to access a variety of services and programs and improve public safety. (Office of Safe & Healthy Neighborhoods)
 
@@ -155,7 +155,7 @@ Louisville has allocated tens of millions of dollars to reduce the number of peo
 
 ### GLP Data Story
 
-GLP will visualize these allocations for others to clearly understand how Louisville proposes spending the money. A major theme that emerges from the data is the extreme shortage of housing units across the city.
+GLP will visualize these allocations for others to clearly understand how Louisville will spend the money. A major theme that emerges from the data is the extreme shortage of housing units across the city.
 
 There is no shortage of data sources in Louisville illustrating this housing gap. (See the [Housing Needs Assessment (HNA)](https://louisvilleky.gov/government/housing/housing-needs-assessment) released periodically by Louisville’s Office of Housing and the Louisville Affordable Housing Trust Fund.
 
