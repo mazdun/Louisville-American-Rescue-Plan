@@ -9,6 +9,73 @@ output:
 knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_file = file.path(dirname(inputFile), 'index.html')) })
 ---
 
+``` {r lollipop plots, fig.show='hide', warning=FALSE}
+
+library(ggplot2)
+
+first_round <- read.csv('intermediate_data/first_round.csv')
+
+first_round_lollipop <- ggplot(first_round, aes(x=x_position, y=allocation)) + 
+geom_point(size=3.5, color="#ddd4cf") + 
+geom_text(label=first_round$category, nudge_y = 2, size=4) +
+geom_segment(aes(x=x_position, 
+                      xend=x_position, 
+                      y=0, 
+                      yend=allocation), size=0.1) + 
+geom_hline(yintercept=0, color='dark gray', size=1.5) +
+scale_y_continuous(limits=c(0,100)) +
+theme_minimal() +
+theme(panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank(), axis.title.x=element_blank(), axis.title.y=element_blank(), axis.text.x=element_blank(),axis.ticks.x=element_blank()) 
+
+
+second_round <- read.csv('intermediate_data/second_round.csv')
+
+second_round_lollipop <- ggplot(second_round, aes(x=x_position, y=allocation)) + 
+geom_point(size=3.5, color="#ddd4cf") + 
+geom_text(label=second_round$category, nudge_y = 2, size=4) +
+geom_segment(aes(x=x_position, 
+                      xend=x_position, 
+                      y=0, 
+                      yend=allocation), size=0.1) + 
+geom_hline(yintercept=0, color='dark gray', size=1.5) +
+scale_y_continuous(limits=c(0,100)) +
+theme_minimal() +
+theme(panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank(), axis.title.x=element_blank(), axis.title.y=element_blank(), axis.text.x=element_blank(),axis.ticks.x=element_blank()) 
+
+
+fourth_round <- read.csv('intermediate_data/fourth_round.csv')
+
+fourth_round_lollipop <- ggplot(fourth_round, aes(x=x_position, y=allocation)) + 
+geom_point(size=3.5, color="#ddd4cf") + 
+geom_text(label=fourth_round$category, nudge_y = 2, size=4) +
+geom_segment(aes(x=x_position, 
+                      xend=x_position, 
+                      y=0, 
+                      yend=allocation), size=0.1) + 
+geom_hline(yintercept=0, color='dark gray', size=1.5) +
+scale_y_continuous(limits=c(0,100)) +
+theme_minimal() +
+theme(panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank(), axis.title.x=element_blank(), axis.title.y=element_blank(), axis.text.x=element_blank(),axis.ticks.x=element_blank()) 
+
+
+unallocated <- read.csv('intermediate_data/unallocated.csv')
+
+unallocated_lollipop <- ggplot(unallocated, aes(x=x_position, y=allocation)) + 
+geom_point(size=3.5, color="#ddd4cf") + 
+geom_text(label=unallocated$category, nudge_y = 2, size=4) +
+geom_segment(aes(x=x_position, 
+                      xend=x_position, 
+                      y=0, 
+                      yend=allocation), size=0.1) + 
+geom_hline(yintercept=0, color='dark gray', size=1.5) +
+scale_y_continuous(limits=c(0,100)) +
+theme_minimal() +
+theme(panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank(), axis.title.x=element_blank(), axis.title.y=element_blank(), axis.text.x=element_blank(),axis.ticks.x=element_blank()) 
+
+```
+
+![](images/Louisville_total_allocation.png)
+
 ## <span style="color: #00acbb;">Child Care</span>
 
 Reliable access to child care in Louisville is vital to a healthy and inclusive economy. By some estimates, as many as 100,000 women in Kentucky stopped working during the pandemic because of a lack of childcare options. Additionally, according to state data, 9% of Louisville’s licensed child care centers closed between March 2020 and November 2021. 
