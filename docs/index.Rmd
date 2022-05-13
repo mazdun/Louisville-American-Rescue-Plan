@@ -9,6 +9,10 @@ output:
 knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_file = file.path(dirname(inputFile), 'index.html')) })
 ---
 
+Louisville received $388 million from the American Rescue Plan. The first round focused primarily on public health and immediate needs in the wake of the COVID-19 pandemic. Later rounds focused on housing affordability, public safety and improving Louisville's neighborhoods. 
+
+By far, the largest chunk of funding so far has gone to affordable housing (\$89 million). The healthy neighborhoods portion of funding inclues money for Louisville's libraries and parks, among other areas.
+
 ``` {r lollipop plots, fig.show='hide', warning=FALSE}
 
 library(ggplot2)
@@ -127,7 +131,7 @@ A sizable portion of the Healthy Neighborhoods round of ARP spending will go tow
 
 ### GLP Data Story
 
-GLP will explore what, specifically, is included in the $8.5M allocation for youth development and *link additional data sources* (see below) to round out the story.
+GLP will explore what, specifically, is included in the $8.5M allocation for youth development and *link additional data sources* (see below) to round out the story. GLP will seek to answer the guiding question of **whether Louisville is using these ARP funds to nurture the aspirations of young people** across the city.
 
 ``` {r youth development}
 
@@ -147,6 +151,12 @@ youth_development_plot
 ```
 
 ### Additional Data Context {.tabset}
+
+#### Voting Turnout vs. Registration
+
+**Deliverable:** GLP will analyze and visualize the number of young people (ages 18-24) who are registered to vote and who have actually voted. 
+
+Data Sources: [Kentucky State Board of Elections](https://elect.ky.gov/Resources/Pages/Turnout.aspx); Note: There is only statewide voter data by age. For county-level data, GLP will file an information request with the Jefferson County Clerk.
 
 #### Transition to Adult Life
 Tracking what opportunities young people pursue after high school paints an important portrait of how the community's youngest people fare.
@@ -218,7 +228,7 @@ Data Sources: [Kentucky Departments for Libraries and Archives](https://kdla.ky.
 
 Louisville has allocated tens of millions of dollars to reduce the number of people experiencing homelessness.
 
-**ARP Spending Recommendations:** \$40M for an affordable housing trust fund expected to fund between 200 and 250 housing units for people at 30% of the area median income. \$32M to increase the capacity of permanent supportive housing by 200 units. \$1.5M for an outdoor safe space with about 50 tents and other facilities. \$7.5M for renovations to the College Street property (ultimately to replace the outdoor safe space). \$4M to expand an existing downpayment assistance program and help 160 new homeowners. \$4M in funding to an existing home repair program. (Office of Resilience & Community Services; Develop Louisville)
+**ARP Spending Allocations:** \$40M for an affordable housing trust fund expected to fund between 200 and 250 housing units for people at 30% of the area median income. \$32M to increase the capacity of permanent supportive housing by 200 units. \$1.5M for an outdoor safe space with about 50 tents and other facilities. \$7.5M for renovations to the College Street property (ultimately to replace the outdoor safe space). \$4M to expand an existing downpayment assistance program and help 160 new homeowners. \$4M in funding to an existing home repair program. (Office of Resilience & Community Services; Develop Louisville)
 
 ### GLP Data Story
 
@@ -300,7 +310,7 @@ Data Sources: [Building Permits Survey](https://www.census.gov/construction/bps/
 
 Louisville has allocated tens of millions of dollars to public safety and violence deterrence and prevention.
 
-**ARP Spending Recommendation:** \$17.5M for various public safety reforms from the Hilliard Heintz report. \$8M for the Community Violence Intervention Program. \$6M for new LMPD equipment and expanded storage capacity. \$4.5M for Trauma Resilient Communities Expansion. \$3M for a new juvenile assessment center. \$1.3M for Restorative Justice Expansion. \$1M for the Ambassador Institute Expansion. \$1M for the Coordinated Crisis Response to Gun Violence. \$200K for  Family Recovery Courts. \$117K for an Everytown USA Data Fellow. (Louisville Metro Police Department; Office for Safe & Healthy Neighborhoods; Youth Transitional Services)
+**ARP Spending Allocation:** \$17.5M for various public safety reforms from the Hilliard Heintz report. \$8M for the Community Violence Intervention Program. \$6M for new LMPD equipment and expanded storage capacity. \$4.5M for Trauma Resilient Communities Expansion. \$3M for a new juvenile assessment center. \$1.3M for Restorative Justice Expansion. \$1M for the Ambassador Institute Expansion. \$1M for the Coordinated Crisis Response to Gun Violence. \$200K for  Family Recovery Courts. \$117K for an Everytown USA Data Fellow. (Louisville Metro Police Department; Office for Safe & Healthy Neighborhoods; Youth Transitional Services)
 
 ### GLP Data Story
 
@@ -357,7 +367,7 @@ Data Sources: [LMPD Transparency Reports](https://louisville-police.org/800/Tran
 
 Much of Louisville's initial round of ARP funds went toward immediate public health needs as the city responded to the COVID-19 pandemic.
 
-**ARP Spending Recommendation:** \$15M in reimbursement for eligible COVID-related public health expenditures. \$9.8M for the city's COVID-19 response & vaccination activities. \$1.5M for PPE supplies and equipment to 400 licensed and certified childcare providers. \$400K for suicide prevention. \$1.2M for targeted naloxone distribution, supportive services for syringe service participants and increased access to medication assisted
+**ARP Spending Allocation:** \$15M in reimbursement for eligible COVID-related public health expenditures. \$9.8M for the city's COVID-19 response & vaccination activities. \$1.5M for PPE supplies and equipment to 400 licensed and certified childcare providers. \$400K for suicide prevention. \$1.2M for targeted naloxone distribution, supportive services for syringe service participants and increased access to medication assisted
 treatment. 
 
 ### GLP Data Story
