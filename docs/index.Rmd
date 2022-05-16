@@ -154,9 +154,23 @@ youth_development_plot
 
 #### Voting Turnout vs. Registration
 
-**Deliverable:** GLP will analyze and visualize the number of young people (ages 18-24) who are registered to vote and who have actually voted. 
+**Deliverable:** GLP will analyze and visualize the number of young people (ages 18-29) who were registered to vote in previous elections and actually voted.
 
-Data Sources: [Kentucky State Board of Elections](https://elect.ky.gov/Resources/Pages/Turnout.aspx); Note: There is only statewide voter data by age. For county-level data, GLP will file an information request with the Jefferson County Clerk.
+Data Sources: [Tufts University Jonathan M. Tisch College of Civic Life](https://youthdata.circle.tufts.edu/?state=Kentucky&county=Jefferson%20County&datayear=2018&yaevt=1&yaevrr=1&csensy=1&cseyrs=1&customize_changeset_uuid=)
+
+Note: There is only data from the 2016 and 2018 elections. There is statewide voter data by age for the most recent elections available online from the [Kentucky State Board of Elections](https://elect.ky.gov/Resources/Pages/Turnout.aspx). For county-level data, GLP would need to file an information request with the Jefferson County Clerk.
+
+#### Nonprofits Serving Young People
+
+**Deliverable:** GLP will analyze and visualize the percentage of nonprofits that provide services to young people — and compare that to the national average and Louisville's peer cities.
+
+Data Sources: [Tufts University Jonathan M. Tisch College of Civic Life](https://youthdata.circle.tufts.edu/?state=Kentucky&county=Jefferson%20County&datayear=2018&yaevt=1&yaevrr=1&csensy=1&cseyrs=1&customize_changeset_uuid=)
+
+#### Youth Residential Stability
+
+**Deliverable:** GLP will analyze and visualize a standardized metric for the number of young people (18-29) who have lived at the same address for the past 12 months — and compare that to the national average and Louisville's peer cities.
+
+Data Sources: [Tufts University Jonathan M. Tisch College of Civic Life](https://youthdata.circle.tufts.edu/?state=Kentucky&county=Jefferson%20County&datayear=2018&yaevt=1&yaevrr=1&csensy=1&cseyrs=1&customize_changeset_uuid=)
 
 #### Transition to Adult Life
 Tracking what opportunities young people pursue after high school paints an important portrait of how the community's youngest people fare.
@@ -183,9 +197,23 @@ Data Sources: The Jefferson County Coroner’s Office maintains this data. The [
 
 **Deliverable:** Through the same methodology used to determine suicide rates, GLP will request drug-related death data from the Jefferson County Coroner's Office.
 
+#### Statewide Data
+
+There is rich data on youth development available only at the state level:
+
+* percentage of young people (16-29) who feel they belong to a group
+* percentage of young people (16-29) who have volunteered in the last year
+* percentage of young people (16-29) who have boycotted a brand because of political reasons or ethical concerns with the company in the last year
+* percentage of young people (16-29) who worked with a neighbor to do something good for the community in the last year
+* percentage of young people (16-29) who did a favor for a neighbor in the last year
+* percentage of young people (16-29) who talked with someone of a different background in the last year
+* percentage of young people (16-29) who contacted or visted a public official to express an opinion in the last year
+
+Data Sources: [Tufts University Jonathan M. Tisch College of Civic Life](https://youthdata.circle.tufts.edu/)
+
 ## <span style="color: #00acbb;">Libraries</span>
 
-Libraries play an important role in any community, from giving people a place to escape extreme weather to providing reliable internet access and useful personal and career development programs. The Healthy Neighborhoods plan allocates a sizeable chunk of money to Louisville's libraries.
+Libraries play an important role in any community, from giving people a place to escape extreme weather to providing reliable internet access and useful personal and career development programs. The Healthy Neighborhoods plan allocates a sizable chunk of money to Louisville's libraries.
 
 **ARP Spending Recommendations:** \$8M to renovate and expand the Main Louisville Free Public Library. \$5M to open a new library branch in the Fern Creek area. \$800K to renovate and expand the Portland Library. \$800K to renovate and restore services to the Parkland Library. (Louisville Free Public Library)
 
