@@ -11,7 +11,7 @@ knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = e
 
 Louisville received $388 million from the American Rescue Plan. The first round focused primarily on public health and immediate needs in the wake of the COVID-19 pandemic. Later rounds focused on housing affordability, public safety and improving Louisville's neighborhoods. 
 
-By far, the largest chunk of funding so far has gone to affordable housing (\$89 million). The healthy neighborhoods portion of funding inclues money for Louisville's libraries and parks, among other areas.
+By far, the largest chunk of funding so far has gone to affordable housing (\$89 million). The healthy neighborhoods portion of the third round of funding includes money for Louisville's libraries and parks, among other areas.
 
 ``` {r lollipop plots, fig.show='hide', warning=FALSE}
 
