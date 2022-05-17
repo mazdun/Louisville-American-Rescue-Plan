@@ -363,6 +363,12 @@ public_safety_plot
 
 ### Additional Data Context {.tabset}
 
+#### Gun Violence
+
+**Deliverable:** GLP will analyze crime reports published by the Louisville Metro Police Department and visualize the changes over time.
+
+Data Sources: [Louisville Open Data Crime Reports](https://data.louisvilleky.gov/dataset/crime-reports)
+
 #### Kids Entering Detention Centers
 Some kids and teens who are awaiting sentencing are required to stay at youth detention centers where they receive education and medical care. In the second round of funding, there is $3M for a Juvenile Assessment Center to "receive and assess youth who have
 been detained pre-custody in coordination with the court designated workers
@@ -390,6 +396,22 @@ Data Sources: [LMPD](https://www.louisville-police.org/278/Salaries)
 **Deliverable:** GLP will analyze and visualize the overall number of investigations launched into police officers, the results of the investigations and the trends over time.
 
 Data Sources: [LMPD Transparency Reports](https://louisville-police.org/800/Transparency-Reports)
+
+#### Correctional Officer Data
+
+Reports indicate that Metro Corrections is [understaffed by as much as much as 15-20%](https://wfpl.org/study-louisville-jail-continues-to-be-overcrowded-despite-drop-in-admissions/). 
+
+**Deliverable:** GLP will take a closer look at the factors possibly contributing to this shortage of workers by examining compensation data for Metro Corrections officers and officers in Louisville's peer cities.
+
+Data Sources: [Bureau of Labor Statistics](https://www.bls.gov/oes/current/oes_31140.htm); GLP will also request precise officer staffing data from Metro Corrections.
+
+#### Inmate Deaths
+
+In recent months, there has been a [significant uptick in the number of deaths](https://www.leoweekly.com/2022/03/another-inmate-at-louisvilles-jail-has-died-the-8th-since-november/) of individuals within the custody of the Louisville Metro Department of Corrections. 
+
+**Deliverable:** GLP will take a closer look at these numbers in recent months and compare them to historical numbers. 
+
+Data Sources: Louisville Metro Department of Corrections Press Releases
 
 ## <span style="color: #00acbb;">Public Health</span>
 
