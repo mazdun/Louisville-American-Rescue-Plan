@@ -13,6 +13,8 @@ Louisville received $388 million from the American Rescue Plan. The first round 
 
 By far, the largest chunk of funding so far has gone to affordable housing (\$89 million). The healthy neighborhoods portion of the third round of funding includes money for Louisville's libraries and parks, among other areas.
 
+Note that *compliance and reporting* is a required allocation and accounts for less than 5% of the $388 million total.
+
 ``` {r lollipop plots, fig.show='hide', warning=FALSE}
 
 library(ggplot2)
@@ -80,48 +82,173 @@ theme(panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank()
 
 ![](images/Louisville_total_allocation.png)
 
-## <span style="color: #00acbb;">Child Care</span>
+## <span style="color: #00acbb;">Affordable Housing</span>
 
-Reliable access to child care in Louisville is vital to a healthy and inclusive economy. By some estimates, as many as 100,000 women in Kentucky stopped working during the pandemic because of a lack of childcare options. Additionally, according to state data, 9% of Louisville’s licensed child care centers closed between March 2020 and November 2021. 
+Louisville has allocated tens of millions of dollars to reduce the number of people experiencing homelessness.
 
-**ARP Spending Recommendation:** $7.5M to provide childcare and early learning projects to address immediate COVID-19 needs, expand access to childcare and early learning, improve quality and mitigate COVID-19 related developmental delays. (Office of the Mayor)
+**ARP Spending Allocations:** \$40M for an affordable housing trust fund expected to fund between 200 and 250 housing units for people at 30% of the area median income. \$32M to increase the capacity of permanent supportive housing by 200 units. \$1.5M for an outdoor safe space with about 50 tents and other facilities. \$7.5M for renovations to the College Street property (ultimately to replace the outdoor safe space). \$4M to expand an existing downpayment assistance program and help 160 new homeowners. \$4M in funding to an existing home repair program. (Office of Resilience & Community Services; Develop Louisville)
 
 ### GLP Data Story
 
-GLP will explore what, specifically, is included in the $7.5M allocation for child care and *link additional data sources* (see below) to round out the story.
+GLP will visualize these allocations for others to clearly understand how Louisville will spend the money. A major theme that emerges from the data is the extreme shortage of housing units across the city.
 
-``` {r child care}
+There is no shortage of data sources in Louisville illustrating this housing gap. See the [Housing Needs Assessment (HNA)](https://louisvilleky.gov/government/housing/housing-needs-assessment) released periodically by Louisville’s Office of Housing and the Louisville Affordable Housing Trust Fund.
 
-childcare_tree <- suppressWarnings(read.csv('intermediate_data/childcare.csv'))
+GLP will expand on this data, visualizing the most recent estimates, and *link additional data sources* (see below) to round out the story.
+
+``` {r affordable housing}
+
+housing_tree <- suppressWarnings(read.csv('intermediate_data/affordable_housing.csv'))
 
 #install.packages("collapsibleTree")
 library(collapsibleTree) 
 
-childcare_plot <- collapsibleTree(childcare_tree, 
+housing_plot <- collapsibleTree(housing_tree, 
+                     c("category", "topic","description"),
+                     root=" ",
+                     height = 350,
+                     fill = "#00acbb",
+                     zoomable=FALSE)
+
+housing_plot
+```
+
+### Additional Data Context {.tabset}
+
+#### Rent vs. Income Trends
+Are incomes rising proportionately with rents for different segments of the population?
+
+**Deliverable:** GLP will analyze and visualize trends in rent prices and income over time.
+
+#### Affordable Housing Gap
+As the [Housing Needs Assessment (HNA)](https://louisvilleky.gov/government/housing/housing-needs-assessment) shows, an urgent housing need exists for those living with the lowest incomes. For example, there are only enough available and affordable homes for 46% of households making 30% of the area median income. Louisville needs some 31,000 housing units for this segment of the population. ARP funds will help to bring the city more housing units but will not address the full need.
+
+**Deliverable:** GLP will creatively visualize this surprising gap across all income levels, bring in the most recent data and visualize trends over time.
+
+Data Sources: [Public Use Microdata Sample (PUMS)](https://www.census.gov/programs-surveys/acs/microdata.html); [Housing and Urban Development](https://www.huduser.gov/portal/datasets/assthsg.html)
+
+![](images/housing_affordability_gap.png)
+
+#### Profile of Homeowners in Subsidized Housing
+In addition to knowing how many affordable housing units are needed across Louisville, it's also important to  understand more about the homeowners. 
+
+**Deliverable:** GLP will analyze and visualize the detailed "Picture of Subsidized Households" data from the U.S. Department of Housing and Urban Development to gain a clearer understanding of the gender, age, race, disability status, income source and family structure of households that depend on various subsidized housing programs.
+
+Data Sources: [Housing and Urban Development](https://www.huduser.gov/portal/datasets/assthsg.html)
+
+#### Wait Times for Housing Assistance
+Long wait times for federal housing assistance have beleaguered communities and homeowners across the country. 
+
+**Deliverable:** GLP will analyze the current local wait times for housing assistance and the trends over time.
+
+Data Sources: [Housing and Urban Development](https://www.huduser.gov/portal/datasets/assthsg.html)
+
+#### Homelessness Statistics
+Who are those individuals in Louisville currently experiencing homelessness and how has that changed over time?
+
+**Deliverable:** GLP will aggregate and visualize homelessness data from the Coalition for the Homeless.
+
+Data Sources: [Annual Census of the Homeless in Metro Louisville](https://louhomeless.org/publications/)
+
+#### Youth Homelessness
+**Deliverable:** GLP will aggregate and visualize youth homelessness data from JCPS.
+
+Data Sources: JCPS
+
+Note: This will provide a broader definition of homelessness than just street homelessness. It includes people who are currently sheltered but without a certain home. Many are staying with another family or with a relative while their parents are unsheltered.
+
+#### Housing Permits vs. New Jobs
+In many cities across the country, there are more jobs available than there are housing permits being issued.
+
+**Deliverable:** GLP will juxtapose data about the number of new housing permits issued in the last year from the U.S. Census Bureau’s Building Permits Survey with data from the Bureau of Labor Statistics about new jobs being created in a given year. 
+
+Data Sources: [Building Permits Survey](https://www.census.gov/construction/bps/msamonthly.html); [Metro Area Employment](https://www.bls.gov/web/metro/metro_oty_change.htm)
+
+#### Small Dollar Mortgages
+Recent reporting across the country suggests that financial institutions are issuing fewer small-dollar mortgages, and that is preventing Americans from buying affordable homes. 
+
+**Deliverable:** GLP will analyze and visualize data related to the number of small-dollar mortgages issued over time in Louisville.
+
+Data Sources: [Home Mortgage Disclosure Act data](https://ffiec.cfpb.gov/data-browser/)
+
+## <span style="color: #00acbb;">Public Safety</span>
+
+Louisville has allocated tens of millions of dollars to public safety and violence deterrence and prevention.
+
+**ARP Spending Allocation:** \$17.5M for various public safety reforms from the Hilliard Heintz report. \$8M for the Community Violence Intervention Program. \$6M for new LMPD equipment and expanded storage capacity. \$4.5M for Trauma Resilient Communities Expansion. \$3M for a new juvenile assessment center. \$1.3M for Restorative Justice Expansion. \$1M for the Ambassador Institute Expansion. \$1M for the Coordinated Crisis Response to Gun Violence. \$200K for  Family Recovery Courts. \$117K for an Everytown USA Data Fellow. (Louisville Metro Police Department; Office for Safe & Healthy Neighborhoods; Youth Transitional Services)
+
+### GLP Data Story
+
+GLP will visualize and expand on these allocations and link other data sources to round out the story.
+
+``` {r public safety}
+
+public_safety_tree <- suppressWarnings(read.csv('intermediate_data/public_safety.csv'))
+
+#install.packages("collapsibleTree")
+library(collapsibleTree) 
+
+public_safety_plot <- collapsibleTree(public_safety_tree, 
                      c("category", "topic","description"),
                      root=" ",
                      height = 250,
                      fill = "#00acbb",
                      zoomable=FALSE)
 
-childcare_plot
+public_safety_plot
 ```
 
 ### Additional Data Context {.tabset}
 
-#### New Zoning Regulations
-Family child care homes can now operate in all residential areas, under certain conditions. Large child care centers can now operate in certain residential and industrial zones (instead of only commercial ones), under certain conditions. 
+#### Gun Violence
 
-**Deliverable:** GLP will visualize the expansion in potential child care access, juxtaposed against certain economic data.
+**Deliverable:** GLP will analyze crime reports published by the Louisville Metro Police Department and visualize the changes over time.
 
-Data Sources: [WFPL](https://wfpl.org/city-aims-to-expand-access-to-child-care-facilities-by-loosening-zoning-restrictions/), [Louisville Open Data](https://data.louisvilleky.gov/dataset/jefferson-county-ky-zoning-0)
+Data Sources: [Louisville Open Data Crime Reports](https://data.louisvilleky.gov/dataset/crime-reports)
 
-![](images/zones.png)
+#### Kids Entering Detention Centers
+Some kids and teens who are awaiting sentencing are required to stay at youth detention centers where they receive education and medical care. In the second round of funding, there is $3M for a Juvenile Assessment Center to "receive and assess youth who have
+been detained pre-custody in coordination with the court designated workers
+assessment process." 
 
-#### Proximity to Jobs
-Child care is tightly interwoven with labor force participation and other labor force outcomes. Louisville saw a large exodus of women from the labor force as child care options dwindled. 
+**Deliverable:** GLP will analyze the number of kids who stay at detention centers (by race and gender) and how long they stay there.
 
-**Deliverable:** GLP will visualize Louisville's job hot spots and compute the potential distances to child care.
+Data Sources: [Louisville Open Data](https://data.louisvilleky.gov/dataset/youth-detention-services); Data only available 2017-2019.
+
+#### Breakdown of Public Safety Spending
+How does Louisville's spending on equipment, personnel and programs within its police department compare to overall spending in other departments across the city and spending in other cities?  
+
+**Deliverable:** GLP will analyze broad buckets of spending within the police department and compare it to other cities.
+
+Data Sources: [Louisville Budget](https://louisvilleky.gov/government/management-budget/fy22-budget)
+
+#### Police Officer and Related Staff Salaries
+
+**Deliverable:** GLP will analyze how Louisville compensates its officers (both through salary and benefits) — and how that compares to its peer cities.
+
+Data Sources: [LMPD](https://www.louisville-police.org/278/Salaries)
+
+#### Professional Standards Unit Investigations
+
+**Deliverable:** GLP will analyze and visualize the overall number of investigations launched into police officers, the results of the investigations and the trends over time.
+
+Data Sources: [LMPD Transparency Reports](https://louisville-police.org/800/Transparency-Reports)
+
+#### Correctional Officer Data
+
+Reports indicate that Metro Corrections is [understaffed by as much as much as 15-20%](https://wfpl.org/study-louisville-jail-continues-to-be-overcrowded-despite-drop-in-admissions/). 
+
+**Deliverable:** GLP will take a closer look at the factors possibly contributing to this shortage of workers by examining compensation data for Metro Corrections officers and officers in Louisville's peer cities.
+
+Data Sources: [Bureau of Labor Statistics](https://www.bls.gov/oes/current/oes_31140.htm); GLP will also request precise officer staffing data from Metro Corrections.
+
+#### Inmate Deaths
+
+In recent months, there has been a [significant uptick in the number of deaths](https://www.leoweekly.com/2022/03/another-inmate-at-louisvilles-jail-has-died-the-8th-since-november/) of individuals within the custody of the Louisville Metro Department of Corrections. 
+
+**Deliverable:** GLP will take a closer look at these numbers in recent months and compare them to historical numbers. 
+
+Data Sources: Louisville Metro Department of Corrections Press Releases
 
 ## <span style="color: #00acbb;">Youth Development</span>
 
@@ -211,6 +338,55 @@ There is rich data on youth development available only at the state level:
 
 Data Sources: [Tufts University Jonathan M. Tisch College of Civic Life](https://youthdata.circle.tufts.edu/)
 
+#### Kentucky Incentives for Prevention
+
+**Deliverable:** GLP will analyze and visualize data related to youth use of alcohol, tobacco and other drugs (ATOD), as well as a number of additional factors related to adolescent social and emotional well-being. 
+
+Data Sources: [Kentucky Incentives for Prevention Survey](https://www.kipsurvey.com/)
+
+## <span style="color: #00acbb;">Child Care</span>
+
+Reliable access to child care in Louisville is vital to a healthy and inclusive economy. By some estimates, as many as 100,000 women in Kentucky stopped working during the pandemic because of a lack of childcare options. Additionally, according to state data, 9% of Louisville’s licensed child care centers closed between March 2020 and November 2021. 
+
+**ARP Spending Recommendation:** $7.5M to provide childcare and early learning projects to address immediate COVID-19 needs, expand access to childcare and early learning, improve quality and mitigate COVID-19 related developmental delays. (Office of the Mayor)
+
+### GLP Data Story
+
+GLP will explore what, specifically, is included in the $7.5M allocation for child care and *link additional data sources* (see below) to round out the story.
+
+``` {r child care}
+
+childcare_tree <- suppressWarnings(read.csv('intermediate_data/childcare.csv'))
+
+#install.packages("collapsibleTree")
+library(collapsibleTree) 
+
+childcare_plot <- collapsibleTree(childcare_tree, 
+                     c("category", "topic","description"),
+                     root=" ",
+                     height = 250,
+                     fill = "#00acbb",
+                     zoomable=FALSE)
+
+childcare_plot
+```
+
+### Additional Data Context {.tabset}
+
+#### New Zoning Regulations
+Family child care homes can now operate in all residential areas, under certain conditions. Large child care centers can now operate in certain residential and industrial zones (instead of only commercial ones), under certain conditions. 
+
+**Deliverable:** GLP will visualize the expansion in potential child care access, juxtaposed against certain economic data.
+
+Data Sources: [WFPL](https://wfpl.org/city-aims-to-expand-access-to-child-care-facilities-by-loosening-zoning-restrictions/), [Louisville Open Data](https://data.louisvilleky.gov/dataset/jefferson-county-ky-zoning-0)
+
+![](images/zones.png)
+
+#### Proximity to Jobs
+Child care is tightly interwoven with labor force participation and other labor force outcomes. Louisville saw a large exodus of women from the labor force as child care options dwindled. 
+
+**Deliverable:** GLP will visualize Louisville's job hot spots and compute the potential distances to child care.
+
 ## <span style="color: #00acbb;">Libraries</span>
 
 Libraries play an important role in any community, from giving people a place to escape extreme weather to providing reliable internet access and useful personal and career development programs. The Healthy Neighborhoods plan allocates a sizable chunk of money to Louisville's libraries.
@@ -251,167 +427,6 @@ With more funding allocated for libraries, it is helpful to see what people use 
 **Deliverable:** GLP will analyze a number of county-level library statistics (program attendance, internet and technology usage, etc.) that are available from the early 2000s onward.
 
 Data Sources: [Kentucky Departments for Libraries and Archives](https://kdla.ky.gov/librarians/plssd/Pages/LibraryStatistics.aspx)
-
-## <span style="color: #00acbb;">Affordable Housing</span>
-
-Louisville has allocated tens of millions of dollars to reduce the number of people experiencing homelessness.
-
-**ARP Spending Allocations:** \$40M for an affordable housing trust fund expected to fund between 200 and 250 housing units for people at 30% of the area median income. \$32M to increase the capacity of permanent supportive housing by 200 units. \$1.5M for an outdoor safe space with about 50 tents and other facilities. \$7.5M for renovations to the College Street property (ultimately to replace the outdoor safe space). \$4M to expand an existing downpayment assistance program and help 160 new homeowners. \$4M in funding to an existing home repair program. (Office of Resilience & Community Services; Develop Louisville)
-
-### GLP Data Story
-
-GLP will visualize these allocations for others to clearly understand how Louisville will spend the money. A major theme that emerges from the data is the extreme shortage of housing units across the city.
-
-There is no shortage of data sources in Louisville illustrating this housing gap. (See the [Housing Needs Assessment (HNA)](https://louisvilleky.gov/government/housing/housing-needs-assessment) released periodically by Louisville’s Office of Housing and the Louisville Affordable Housing Trust Fund.
-
-GLP will expand on this data, visualizing the most recent estimates, and *link additional data sources* (see below) to round out the story.
-
-``` {r affordable housing}
-
-housing_tree <- suppressWarnings(read.csv('intermediate_data/affordable_housing.csv'))
-
-#install.packages("collapsibleTree")
-library(collapsibleTree) 
-
-housing_plot <- collapsibleTree(housing_tree, 
-                     c("category", "topic","description"),
-                     root=" ",
-                     height = 350,
-                     fill = "#00acbb",
-                     zoomable=FALSE)
-
-housing_plot
-```
-
-### Additional Data Context {.tabset}
-
-#### Rent vs. Income Trends
-Are incomes rising proportionately with rents for different segments of the population?
-
-**Deliverable:** GLP will analyze and visualize trends in rent prices and income over time.
-
-#### Affordable Housing Gap
-As the [Housing Needs Assessment (HNA)](https://louisvilleky.gov/government/housing/housing-needs-assessment) shows, an urgent housing need exists for those living with the lowest incomes. For example, there are only enough available and affordable homes for 46% of households making 30% of the area median income. Louisville needs some 31,000 housing units for this segment of the population. ARP funds will help to bring the city more housing units but will not address the full need.
-
-**Deliverable:** GLP will creatively visualize this surprising gap across all income levels, bring in the most recent data and visualize trends over time.
-
-Data Sources: [Public Use Microdata Sample (PUMS)](https://www.census.gov/programs-surveys/acs/microdata.html); [Housing and Urban Development](https://www.huduser.gov/portal/datasets/assthsg.html)
-
-![](images/housing_affordability_gap.png)
-
-#### Profile of Homeowners in Subsidized Housing
-In addition to knowing how many affordable housing units are needed across Louisville, it's also important to  understand more about the homeowners. 
-
-**Deliverable:** GLP will analyze and visualize the detailed "Picture of Subsidized Households" data from the U.S. Department of Housing and Urban Development to gain a clearer understanding of the gender, age, race, disability status, income source and family structure of households that depend on various subsidized housing programs.
-
-Data Sources: [Housing and Urban Development](https://www.huduser.gov/portal/datasets/assthsg.html)
-
-#### Wait Times for Housing Assistance
-Long wait times for federal housing assistance have beleaguered communities and homeowners across the country. 
-
-**Deliverable:** GLP will analyze the current local wait times for housing assistance and the trends over time.
-
-Data Sources: [Housing and Urban Development](https://www.huduser.gov/portal/datasets/assthsg.html)
-
-#### Homelessness Statistics
-Who are those individuals in Louisville currently experiencing homelessness and how has that changed over time?
-
-**Deliverable:** GLP will aggregate and visualize homelessness data from the Coalition for the Homeless.
-
-Data Sources: [Annual Census of the Homeless in Metro Louisville](https://louhomeless.org/publications/)
-
-#### Youth Homelessness
-**Deliverable:** GLP will aggregate and visualize youth homelessness data from JCPS.
-
-Data Sources: JCPS
-
-Note: This will provide a broader definition of homelessness than just street homelessness. It includes people who are currently sheltered but without a certain home. Many are staying with another family or with a relative while their parents are unsheltered.
-
-#### Housing Permits vs. New Jobs
-In many cities across the country, there are more jobs available than there are housing permits being issued.
-
-**Deliverable:** GLP will juxtapose data about the number of new housing permits issued in the last year from the U.S. Census Bureau’s Building Permits Survey with data from the Bureau of Labor Statistics about new jobs being created in a given year. 
-
-Data Sources: [Building Permits Survey](https://www.census.gov/construction/bps/msamonthly.html); [Metro Area Employment](https://www.bls.gov/web/metro/metro_oty_change.htm)
-
-## <span style="color: #00acbb;">Public Safety</span>
-
-Louisville has allocated tens of millions of dollars to public safety and violence deterrence and prevention.
-
-**ARP Spending Allocation:** \$17.5M for various public safety reforms from the Hilliard Heintz report. \$8M for the Community Violence Intervention Program. \$6M for new LMPD equipment and expanded storage capacity. \$4.5M for Trauma Resilient Communities Expansion. \$3M for a new juvenile assessment center. \$1.3M for Restorative Justice Expansion. \$1M for the Ambassador Institute Expansion. \$1M for the Coordinated Crisis Response to Gun Violence. \$200K for  Family Recovery Courts. \$117K for an Everytown USA Data Fellow. (Louisville Metro Police Department; Office for Safe & Healthy Neighborhoods; Youth Transitional Services)
-
-### GLP Data Story
-
-GLP will visualize and expand on these allocations and link other data sources to round out the story.
-
-``` {r public safety}
-
-public_safety_tree <- suppressWarnings(read.csv('intermediate_data/public_safety.csv'))
-
-#install.packages("collapsibleTree")
-library(collapsibleTree) 
-
-public_safety_plot <- collapsibleTree(public_safety_tree, 
-                     c("category", "topic","description"),
-                     root=" ",
-                     height = 250,
-                     fill = "#00acbb",
-                     zoomable=FALSE)
-
-public_safety_plot
-```
-
-### Additional Data Context {.tabset}
-
-#### Gun Violence
-
-**Deliverable:** GLP will analyze crime reports published by the Louisville Metro Police Department and visualize the changes over time.
-
-Data Sources: [Louisville Open Data Crime Reports](https://data.louisvilleky.gov/dataset/crime-reports)
-
-#### Kids Entering Detention Centers
-Some kids and teens who are awaiting sentencing are required to stay at youth detention centers where they receive education and medical care. In the second round of funding, there is $3M for a Juvenile Assessment Center to "receive and assess youth who have
-been detained pre-custody in coordination with the court designated workers
-assessment process." 
-
-**Deliverable:** GLP will analyze the number of kids who stay at detention centers (by race and gender) and how long they stay there.
-
-Data Sources: [Louisville Open Data](https://data.louisvilleky.gov/dataset/youth-detention-services); Data only available 2017-2019.
-
-#### Breakdown of Public Safety Spending
-How does Louisville's spending on equipment, personnel and programs within its police department compare to overall spending in other departments across the city and spending in other cities?  
-
-**Deliverable:** GLP will analyze broad buckets of spending within the police department and compare it to other cities.
-
-Data Sources: [Louisville Budget](https://louisvilleky.gov/government/management-budget/fy22-budget)
-
-#### Police Officer and Related Staff Salaries
-
-**Deliverable:** GLP will analyze how Louisville compensates its officers (both through salary and benefits) — and how that compares to its peer cities.
-
-Data Sources: [LMPD](https://www.louisville-police.org/278/Salaries)
-
-#### Professional Standards Unit Investigations
-
-**Deliverable:** GLP will analyze and visualize the overall number of investigations launched into police officers, the results of the investigations and the trends over time.
-
-Data Sources: [LMPD Transparency Reports](https://louisville-police.org/800/Transparency-Reports)
-
-#### Correctional Officer Data
-
-Reports indicate that Metro Corrections is [understaffed by as much as much as 15-20%](https://wfpl.org/study-louisville-jail-continues-to-be-overcrowded-despite-drop-in-admissions/). 
-
-**Deliverable:** GLP will take a closer look at the factors possibly contributing to this shortage of workers by examining compensation data for Metro Corrections officers and officers in Louisville's peer cities.
-
-Data Sources: [Bureau of Labor Statistics](https://www.bls.gov/oes/current/oes_31140.htm); GLP will also request precise officer staffing data from Metro Corrections.
-
-#### Inmate Deaths
-
-In recent months, there has been a [significant uptick in the number of deaths](https://www.leoweekly.com/2022/03/another-inmate-at-louisvilles-jail-has-died-the-8th-since-november/) of individuals within the custody of the Louisville Metro Department of Corrections. 
-
-**Deliverable:** GLP will take a closer look at these numbers in recent months and compare them to historical numbers. 
-
-Data Sources: Louisville Metro Department of Corrections Press Releases
 
 ## <span style="color: #00acbb;">Public Health</span>
 
