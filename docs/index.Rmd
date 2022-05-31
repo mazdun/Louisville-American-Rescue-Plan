@@ -207,13 +207,18 @@ public_safety_plot
 Data Sources: [Louisville Open Data Crime Reports](https://data.louisvilleky.gov/dataset/crime-reports)
 
 #### Kids Entering Detention Centers
-Some kids and teens who are awaiting sentencing are required to stay at youth detention centers where they receive education and medical care. In the second round of funding, there is $3M for a Juvenile Assessment Center to "receive and assess youth who have
-been detained pre-custody in coordination with the court designated workers
-assessment process." 
+Some kids and teens who are awaiting sentencing are required to stay at youth detention centers where they receive education and medical care. In the second round of funding, there is $3M for a Juvenile Assessment Center to "receive and assess youth who have been detained pre-custody in coordination with the court designated workers assessment process." 
 
 **Deliverable:** GLP will analyze the number of kids who stay at detention centers (by race and gender) and how long they stay there.
 
 Data Sources: [Louisville Open Data](https://data.louisvilleky.gov/dataset/youth-detention-services); Data only available 2017-2019.
+
+#### LMPD Mental Health and Social Services Spending
+Many communities have relied on police officers as somewhat of a catch-all response to all kinds of crises. However, some say that many of these crises do not merit a police response; instead, they would be better solved by mental health experts and other providers of social services.
+
+**Deliverable:** GLP will analyze and visualize the extent to which LMPD invests in mental health and other social services.
+
+Data Sources: [Louisville Metro Alternative Responder Model Report](https://louisvilleky.gov/mayor-greg-fischer/document/louisville-metro-alternative-responder-model-research-and-planning); LMPD data; Louisville Metro data
 
 #### Breakdown of Public Safety Spending
 How does Louisville's spending on equipment, personnel and programs within its police department compare to overall spending in other departments across the city and spending in other cities?  
