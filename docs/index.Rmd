@@ -318,6 +318,10 @@ Young people who are not pursuing education, employment or other forms of traini
 
 Data Sources: [Federal Reserve](https://fred.stlouisfed.org/tags/series?t=disconnected+youth)
 
+#### Social Media Use
+
+**Deliverable:** GLP will analyze and visualize data related to social media use among young people.
+
 #### Suicide Rates
 Generally, nationwide, rates of suicide and self harm are on the rise among young people. Louisville has seen the same trends. 
 
