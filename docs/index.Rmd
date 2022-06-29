@@ -88,6 +88,10 @@ Louisville has allocated tens of millions of dollars to reduce the number of peo
 
 **ARP Spending Allocations:** \$40M for an affordable housing trust fund expected to fund between 200 and 250 housing units for people at 30% of the area median income. \$32M to increase the capacity of permanent supportive housing by 200 units. \$1.5M for an outdoor safe space with about 50 tents and other facilities. \$7.5M for renovations to the College Street property (ultimately to replace the outdoor safe space). \$4M to expand an existing downpayment assistance program and help 160 new homeowners. \$4M in funding to an existing home repair program. (Office of Resilience & Community Services; Develop Louisville)
 
+### Overview
+
+![](images/Slide7.png)
+
 ### GLP Data Story
 
 GLP will visualize these allocations for others to clearly understand how Louisville will spend the money. A major theme that emerges from the data is the extreme shortage of housing units across the city.
@@ -176,6 +180,10 @@ Data Sources: [Home Mortgage Disclosure Act data](https://ffiec.cfpb.gov/data-br
 Louisville has allocated tens of millions of dollars to public safety and violence deterrence and prevention.
 
 **ARP Spending Allocation:** \$17.5M for various public safety reforms from the Hilliard Heintz report. \$8M for the Community Violence Intervention Program. \$6M for new LMPD equipment and expanded storage capacity. \$4.5M for Trauma Resilient Communities Expansion. \$3M for a new juvenile assessment center. \$1.3M for Restorative Justice Expansion. \$1M for the Ambassador Institute Expansion. \$1M for the Coordinated Crisis Response to Gun Violence. \$200K for  Family Recovery Courts. \$117K for an Everytown USA Data Fellow. (Louisville Metro Police Department; Office for Safe & Healthy Neighborhoods; Youth Transitional Services)
+
+### Overview
+
+![](images/Slide8.png)
 
 ### GLP Data Story
 
@@ -359,6 +367,10 @@ Reliable access to child care in Louisville is vital to a healthy and inclusive 
 
 **ARP Spending Recommendation:** $7.5M to provide childcare and early learning projects to address immediate COVID-19 needs, expand access to childcare and early learning, improve quality and mitigate COVID-19 related developmental delays. (Office of the Mayor)
 
+### Overview
+
+![](images/Slide9.png)
+
 ### GLP Data Story
 
 GLP will explore what, specifically, is included in the $7.5M allocation for child care and *link additional data sources* (see below) to round out the story.
@@ -474,6 +486,8 @@ How will Louisville spend its $1.2M investment in targeted naloxone distribution
 
 Data Sources: [The Foundation for AIDS Research](https://ehe.amfar.org/data/HIV_plan)
 
+## <span style="color: #00acbb;">Workforce Development</span>
 
+![](images/Slide10.png)
 
 
